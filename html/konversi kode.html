@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Konversi Kode HTML</title>
+<style type="text/css">
+	body {
+		background-color:#ddd;
+		padding:20px;
+		font:normal 12px Segoe UI;
+		color:#333;
+	}
+
+</style>
+</head>
+<body>
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<style type="text/css">
+#codes {
+  border:2px solid #666;
+  width:98%;
+  height:400px;
+  margin:5px auto 10px;
+  display:block;
+}
+
+.button-group {
+  margin:0px auto 0px;
+  text-align:center;
+}
+</style>
+<textarea id="codes" placeholder="Tulis/paste kode di sini lalu klik 'Konversi'"></textarea>
+<div class="button-group">
+<button onclick="cdConvert();">Konversi</button>
+    <button onclick="cdClear();">Bersihkan</button>
+</div>
+<script type="text/javascript">
+function cdClear() {
+    var wtarea = document.getElementById('codes');
+    wtarea.value = '';
+}
+
+function cdConvert() {
+    var ctarea = document.getElementById('codes'),
+        cv = ctarea.value;
+    cv = cv.replace(/&/g, "&amp;");
+    cv = cv.replace(/'/g, "&#039;");
+    cv = cv.replace(/"/g, "&quot;");
+    cv = cv.replace(/</g, "&lt;");
+    cv = cv.replace(/>/g, "&gt;");
+    ctarea.value = cv;
+    ctarea.focus();
+    ctarea.select();
+};
+</script>
+</div>
+</body>
+</html>
