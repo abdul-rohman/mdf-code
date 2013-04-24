@@ -12,7 +12,7 @@ $(window).on("beforeunload", function() {
     // ... tampilkan tabir animasi dengan efek `.fadeIn()`
     $('#page-loader').fadeIn(1000).delay(6000).fadeOut(1000);});
 // Back to top
-$(window).scroll(function(){if($(this).scrollTop()>100){$("#backtop").removeAttr("href");$("#backtop").stop().animate({bottom:"-3",right:"20"},{duration:800,queue:false})}else{$("#backtop").stop().animate({bottom:"-50",right:"0"},{duration:1000,queue:false})}});$(function(){$("#backtop").click(function(){$("html, body").animate({scrollTop:0},"slow");return false})});
+$(window).scroll(function(){if($(this).scrollTop()>100){$("#backtop").removeAttr("href");$("#backtop").stop().animate({bottom:"0",right:"0"},{duration:800,queue:false})}else{$("#backtop").stop().animate({bottom:"-50",right:"0"},{duration:1000,queue:false})}});$(function(){$("#backtop").click(function(){$("html, body").animate({scrollTop:0},"slow");return false})});
 //komentar admin
 (function(){if(document.getElementById('comment-holder')){var comments=document.getElementById('comment-holder'),icon=comments.getElementsByTagName('span');for(var i=0;i<icon.length;i++){if(icon[i].className=="icon user blog-author"){icon[i].parentNode.parentNode.className+=" admin-comment";icon[i].parentNode.parentNode.parentNode.className+=" admin-comment-wrapper"}else{icon[i].parentNode.parentNode.className+=" visitor-comment"}}}})();
 // pirobox efek
