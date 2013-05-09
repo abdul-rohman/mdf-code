@@ -1,4 +1,4 @@
-.blogger-clickTrap { display:none }
+<style>.blogger-clickTrap { display:none }
 .quickedit { display:none }
 header,nav,section,aside,article,footer { display:block }
 * { -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box }
@@ -254,4 +254,4 @@ h4#comment-post-message { display:none }
 .comments .continue{border-top:0;width:100%}
 .comments .continue a{padding:7px;text-align:left}
 #comment-editor{width:103%!important}
-.comment-form{width:100%;max-width:100%}
+.comment-form{width:100%;max-width:100%}</style>
