@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Konversi Kode HTML</title>
+<style type="text/css">
+	body {
+		background-color:#0070b0;
+		padding:20px;
+		font:normal 11px Tahoma,Verdana,Arial,Sans-Serif;
+		color:#f8f8f8;
+	}
+
+/* CSS Contact Form */
+#ContactForm1{
+padding:20px;
+}
+#ContactForm1_contact-form-name, #ContactForm1_contact-form-email{
+width: 100%;
+height:auto;
+margin: 5px auto;
+padding: 10px;
+background: #f2f2f2;
+border: 1px solid #ccc;
+color:#777;
+}
+#ContactForm1_contact-form-name:focus, #ContactForm1_contact-form-email:focus, #ContactForm1_contact-form-email-message:focus{
+background: #fffff7;
+}
+#ContactForm1_contact-form-email-message{
+width: 100%;
+height: 175px;
+margin: 5px auto;
+padding: 10px;
+background: #f2f2f2;
+border: 1px solid #ccc;
+color:#777;
+font-family:Arial, sans-serif;
+}
+#ContactForm1_contact-form-submit {
+width: 101px;
+height: 35px;
+float: left;
+color: #FFF;
+padding: 0;
+margin: 10px 0 3px 0 0;
+cursor: pointer;
+background: #5E768D;
+border: 1px solid #556f8c;
+border-radius:3px;
+}
+#ContactForm1_contact-form-submit:hover {
+background:#435c74;
+}
+#ContactForm1_contact-form-error-message, #ContactForm1_contact-form-success-message{
+width: 100%;
+margin-top:35px;
+}
+</style>
+<script type="text/javascript" src="//www.blogger.com/static/v1/widgets/2292841073-widgets.js"/>
+</head>
+<body>
+<form name="contact-form">
+<p></p>
+Nama
+<input id="ContactForm1_contact-form-name" name="name" size="30" type="text" value="" />
+<p></p>
+Alamat Email <span style="color: red; font-weight: bolder;">*</span>
+<p></p>
+<input id="ContactForm1_contact-form-email" name="email" size="30" type="text" value="" />
+<p></p>
+Isi Pesan <span style="color: red; font-weight: bolder;">*</span>
+<textarea cols="25" id="ContactForm1_contact-form-email-message" name="email-message" rows="5"></textarea>
+<p></p>
+<input id="ContactForm1_contact-form-submit" type="button" value="Kirim" />
+<div style="max-width: 222px; text-align: center; width: 100%;">
+<div id="ContactForm1_contact-form-error-message">
+</div>
+<div id="ContactForm1_contact-form-success-message">
+</div>
+</div>
+</form>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/2292841073-widgets.js"></script>
+</body>
+</html>
