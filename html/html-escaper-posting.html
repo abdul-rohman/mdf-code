@@ -96,13 +96,8 @@ function cdConvert() {
     if (opt5.checked) cv = cv.replace(/>/g, "&gt;");
     if (cv.lastIndexOf('\n') != -1 || cv.length > 40) {
         cv = cv.replace(/^/, "<pre><code>");
-    } else {
-        cv = cv.replace(/^/, "<code>");
-    }
-    cv = cv.replace(/$/, "</code></pre>");
-	else {
-	cv = cv.replace(/$/, "</code>");
-	}
+    } 
+        cv = cv.replace(/$/, "</code></pre>");
     ctarea.value = cv;
     ctarea.focus();
     ctarea.select();
