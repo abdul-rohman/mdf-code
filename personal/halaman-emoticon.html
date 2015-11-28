@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="utf-8">
+<title>Emoticon</title>
+<style type="text/css">
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define visible focus styles! 
+:focus {
+	outline: ?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{background:white;color:#333;}
+.emoWrap {
+  position:relative;
+  padding:10px;
+  margin-bottom:7px;
+  background:#fff;
+  font:normal 12px Arial;
+  color:#333;
+}
+img.emo, input.emoKey {
+  display:inline-block; /* Penting! */
+  *display:inline;
+  vertical-align:middle;
+}
+
+input.emoKey {
+  border:1px solid #ccc;
+  background-color:white;
+  font:bold 11px Arial,Sans-Serif;
+  padding:1px 2px;
+  margin:0px 0px 0px 2px;
+  color:rgb(34, 34, 34);
+}
+</style>
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function () {emoticonx({
+emoRange:"#comments p, div.emoWrap",
+putEmoAbove:"#mdf-blog",
+topText:"Klik untuk melihat code!",
+emoMessage:"Untuk memasukkan emoticon setidaknya ada satu spasi sebelum kode emoticon."
+})
+});
+</script>
+<script type="text/javascript">
+window.emoticonx = (function () {
+    var b = function (m) {
+        var j = m || {}, l = j.emoRange || "#comments p, div.emoWrap",
+            k = j.putEmoAbove || "#mdf-blog",
+            h = j.topText || "Klik untuk melihat kode!",
+            a = j.emoMessage || "Untuk memasukkan emoticon setidaknya ada satu spasi sebelum kode emoticon.";
+        $(k).before('<div style="text-align:center" class="emoWrap"> :) :)) ;(( :-) =)) ;( ;-( :d :-d @-) :p :o :&gt;) (o) [-( :-? (p) :-s (m) 8-) :-t :-b  b-( :-# =p~ $-) (b) (f) x-) (k) (h) (c) cheer <br/><b>' + h + "</b><br/>" + a + "</div>");
+        var i = function (c, d, e) {
+            $(l).each(function () {
+                $(this).html($(this).html().replace(/<br>:/g, "<br> :").replace(/<br>;/g, "<br> ;").replace(/<br>=/g, "<br> =").replace(/<br>\^/g, "<br> ^").replace(c, " <img style='max-height:24px' src='" + d + "' class='emo delayLoad' alt='" + e + "' />"))
+            })
+        };
+        i(/\s:\)\)+/g, "http://2.bp.blogspot.com/-iI5nzjVyyQQ/UZVFOhYT4ZI/AAAAAAAAAXM/sJ2bX4h-HN4/s1600/03.gif", ":))");
+        i(/\s;\(\(+/g, "http://2.bp.blogspot.com/-rqCXybRBKpk/UZVFR_i6kKI/AAAAAAAAAXc/vvigptqOfqc/s1600/07.gif", ";((");
+        i(/\s:\)+/g, "http://2.bp.blogspot.com/-mVSpPNpIqBw/UZVFOZBjHgI/AAAAAAAAAW8/KqgefDxYP3Y/s1600/01.gif", ":)");
+        i(/\s:-\)+/g, "http://3.bp.blogspot.com/-j8fozNEvj8Y/UZVFOu0dAuI/AAAAAAAAAXA/ZoJ0rbXKSPg/s1600/02.gif", ":-)");
+        i(/\s=\)\)+/g, "http://3.bp.blogspot.com/-HWJxOaNbaPY/UZVFPGEF4SI/AAAAAAAAAXE/g55guraipf8/s1600/04.gif", "=))");
+        i(/\s;\(+/g, "http://4.bp.blogspot.com/-vqbeaku2noc/UZVFRKCoToI/AAAAAAAAAXI/YsQSQyBB5cI/s1600/05.gif", ";(");
+        i(/\s;-\(+/g, "http://3.bp.blogspot.com/-DSNsufCaxVo/UZVFRsaUEJI/AAAAAAAAAXY/cl7MnwM87iE/s1600/06.gif", ";-(");
+        i(/\s:d/ig, "http://4.bp.blogspot.com/-YAs78m85Roo/UZVFRyeanwI/AAAAAAAAAXk/OZGhBLP8xMI/s1600/08.gif", ":d");
+        i(/\s:-d/ig, "http://3.bp.blogspot.com/-XA_TTFKT12I/UZVFSHtcKVI/AAAAAAAAAXs/CH9LWT0GiMo/s1600/09.gif", ":-d");
+        i(/\s@-\)+/g, "http://1.bp.blogspot.com/-SFIFkbzr6ZU/UZVFSUsmA2I/AAAAAAAAAXw/9X3CjoT22Vk/s1600/10.gif", "@-)");
+        i(/\s:p/ig, "http://1.bp.blogspot.com/-pX51MuUOy8I/UZVFSvLUVCI/AAAAAAAAAX0/jdSC87ofrYE/s1600/11.gif", ":p");
+        i(/\s:o/ig, "http://1.bp.blogspot.com/-bUkeo5QMb04/UZVFS6DfcKI/AAAAAAAAAX8/d38xjenxELs/s1600/12.gif", ":o");
+        i(/\s:&gt;\)+/g, "http://1.bp.blogspot.com/-5GyEMZIJnSU/UZVFS0qpS6I/AAAAAAAAAX4/SHFQwK7SK0Y/s1600/13.gif", ":&gt;)");
+        i(/\s\(o\)+/ig, "http://1.bp.blogspot.com/-sZ8Eb1XRyVE/UZVFVAMBY6I/AAAAAAAAAYY/m4rkk7UMWmk/s1600/14.gif", "(o)");
+        i(/\s\[-\(+/g, "http://3.bp.blogspot.com/-KPWit8AMXX0/UZVFVJ6cXrI/AAAAAAAAAYQ/JOzJZ2vY9qg/s1600/15.gif", "[-(");
+        i(/\s:-\?/g, "http://2.bp.blogspot.com/-qMQS1-FPawU/UZVFVf01j3I/AAAAAAAAAYU/CbsgLt0if5o/s1600/16.gif", ":-?");
+        i(/\s\(p\)+/ig, "http://1.bp.blogspot.com/-6sniQmmS-Uw/UZVFVgOU9FI/AAAAAAAAAYo/kv1JsMiTVLo/s1600/17.gif", "(p)");
+        i(/\s:-s/ig, "http://2.bp.blogspot.com/-OlYiKN74ZWs/UZVFV_FlCGI/AAAAAAAAAYw/-txA6lLDn2s/s1600/18.gif", ":-s");
+        i(/\s\(m\)+/ig, "http://1.bp.blogspot.com/-623R5qQADiU/UZVFVxzY5hI/AAAAAAAAAYs/sBaQKYrosSA/s1600/19.gif", "(m)");
+        i(/\s8-\)+/ig, "http://3.bp.blogspot.com/-IoFVgMB3LjE/UZVFWQOKvOI/AAAAAAAAAY8/LeCzvSUu2bE/s1600/20.gif", "8-)");
+        i(/\s:-t/ig, "http://3.bp.blogspot.com/-2tPhlCxncPo/UZVFWe_c0dI/AAAAAAAAAZA/X_oam5X0FYE/s1600/21.gif", ":-t");
+        i(/\s:-b/ig, "http://1.bp.blogspot.com/-GTsNLYQ1K-0/UZVFWsJmltI/AAAAAAAAAZE/gBPhltZBoqs/s1600/22.gif", ":-b");
+        i(/\sb-\(+/ig, "http://4.bp.blogspot.com/-6x_plxmH_Jc/UZVFW59MsRI/AAAAAAAAAZQ/XBARDbHfdlg/s1600/23.gif", "b-(");
+        i(/\s:-#/ig, "http://2.bp.blogspot.com/-y7tXCeBITpM/UZVFXAXnN6I/AAAAAAAAAZU/ZDNlj7j3PJQ/s1600/24.gif", ":-#");
+        i(/\s=p~/ig, "http://2.bp.blogspot.com/-dTA5CkfuMc4/UZVFXPBKM8I/AAAAAAAAAZY/B2RX22kZ-2k/s1600/25.gif", "=p~");
+        i(/\s\$-\)+/ig, "http://4.bp.blogspot.com/-PET2LMZ0PvM/UZVFXsVeMTI/AAAAAAAAAZo/Fo2olOKpBPs/s1600/26.gif", "$-)");
+        i(/\s\(b\)+/ig, "http://1.bp.blogspot.com/-fWTI2oXMA9E/UZVFXjTsOYI/AAAAAAAAAZw/u3-X0tfO2bQ/s1600/27.gif", "(b)");
+        i(/\s\(f\)+/ig, "http://2.bp.blogspot.com/-FNNqpWb8Cwg/UZVFX0oJNVI/AAAAAAAAAZ0/gyjNc0VD6HE/s1600/28.gif", "(f)");
+        i(/\sx-\)+/ig, "http://3.bp.blogspot.com/-6_ZkgnQ3jcA/UZVFYDuBkiI/AAAAAAAAAZ8/7nmaVAdUHdc/s1600/29.gif", "x-)");
+        i(/\s\(k\)+/ig, "http://1.bp.blogspot.com/-piicXjZNyWs/UZVFYcOvjJI/AAAAAAAAAaE/tMMX-BbK__c/s1600/30.gif", "(k)");
+        i(/\s\(h\)+/ig, "http://2.bp.blogspot.com/-37HZJ-Ysetw/UZVFYUbPtEI/AAAAAAAAAaM/Cz8mhaqNFb4/s1600/31.gif", "(h)");
+        i(/\s\(c\)+/ig, "http://1.bp.blogspot.com/-E56YyQePjMU/UZVFYlVbiWI/AAAAAAAAAaQ/2pNrt1J6cww/s1600/32.gif", "(c)");
+        i(/\scheer/ig, "http://4.bp.blogspot.com/-icpBktc5KIE/UZVFY-JKQRI/AAAAAAAAAaY/7FxjY2OZtaI/s1600/33.gif", "cheer");
+        $("div.emoWrap").one("click", function () {
+            if (a) {
+                alert(a)
+            }
+        });
+        $(".emo").css("cursor", "pointer").live("click", function (c) {
+            $(".emoKey").remove();
+            $(this).after('<input class="emoKey" type="text" size="' + this.alt.length + '" value=" ' + this.alt + '" />');
+            $(".emoKey").trigger("select");
+            c.stopPropagation()
+        });
+        $(".emoKey").live("click", function () {
+            $(this).focus().select()
+        })
+		$(document).on("click", function () {
+            $(".emoKey").remove()
+        });
+    };
+    return function (a) {
+        b(a)
+    }
+})();
+</script>
+<div id="mdf-blog"/>
+
+</body></html>
