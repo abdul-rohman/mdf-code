@@ -1,3 +1,4 @@
+<style>
 /* artikel proteksi */
 .content_box { -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -ms-user-select:none; -moz-user-select:none }
 
@@ -50,3 +51,4 @@
 .related-post-style-1 li a:before { content:&quot;\f08e&quot;; color:#999; margin-right:5px; font-family:FontAwesome }
 .related-post-style-1 li a:hover { color:darkred }
 .iklan-ga2 { display:none; width:100%; float:right; padding:10px 0 10px 10px; text-align:right }
+</style>
